@@ -1,11 +1,20 @@
 <?xml version="1.0"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="vendor/autoload.php" colors="true">
-  <coverage/>
+<phpunit 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" 
+  bootstrap="vendor/autoload.php" 
+  colors="true"
+>
   <testsuites>
-    <testsuite name="Testes de unidade">
+    <testsuite name="Testes">
       <directory>tests</directory>
     </testsuite>
   </testsuites>
+  <coverage processUncoveredFiles="true">
+    <include>
+        <directory suffix=".php">src</directory>
+    </include>
+  </coverage>
   <logging>
     <testdoxText outputFile="testdox.txt"/>
   </logging>
