@@ -17,6 +17,7 @@ class LeilaoDaoTest extends TestCase
     public function setUp(): void
     {
         $this->pdo = ConnectionCreator::getConnection();
+        $this->pdo->beginTransaction();
     }
 
     public function testInsercaoEBuscaDevemFuncionar()
@@ -38,6 +39,6 @@ class LeilaoDaoTest extends TestCase
 
     public function tearDown(): void
     {
-        $this->pdo->exec('DELETE FROM leiloes;');
+        $this->pdo->rollback();
     }
 }
