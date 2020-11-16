@@ -6,8 +6,12 @@
   colors="true"
 >
   <testsuites>
-    <testsuite name="Testes">
-      <directory>tests</directory>
+    <testsuite name="unit">
+      <directory>tests/Unit</directory>
+    </testsuite>
+    
+    <testsuite name="integration">
+      <directory>tests/Integration</directory>
     </testsuite>
   </testsuites>
   <coverage processUncoveredFiles="true">
